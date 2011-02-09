@@ -141,7 +141,19 @@ command! DynamicFoldcolumnToggle call s:DynamicFoldcolumnToggle()
 " Section: Mappings {{{1
 
 " mapping to toggle DynamicFoldcolumn
-map <Leader>dt :DynamicFoldcolumnToggle<CR>
+map <Leader>ft :DynamicFoldcolumnToggle<CR>
+
+" mappings to set foldlevel
+map <Leader>f0 :silent! set foldlevel=0<CR>
+map <Leader>f1 :silent! set foldlevel=1<CR>
+map <Leader>f2 :silent! set foldlevel=2<CR>
+map <Leader>f3 :silent! set foldlevel=3<CR>
+map <Leader>f4 :silent! set foldlevel=4<CR>
+map <Leader>f5 :silent! set foldlevel=5<CR>
+map <Leader>f6 :silent! set foldlevel=6<CR>
+map <Leader>f7 :silent! set foldlevel=7<CR>
+map <Leader>f8 :silent! set foldlevel=8<CR>
+map <Leader>f9 :silent! set foldlevel=9<CR>
 
 " Section: Menu {{{1
 
