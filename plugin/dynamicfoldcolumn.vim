@@ -1,5 +1,5 @@
 " Name:    dynamicfoldcolumn.vim
-" Version: $Id$
+" Version: 0.1.0
 " Author:  Markus Braun <markus.braun@krawel.de>
 " Summary: Vim plugin to show a dynamic number of foldcolumns
 " Licence: This program is free software; you can redistribute it and/or
@@ -51,7 +51,7 @@
 if (exists("g:loaded_dynamicfoldcolumn") || &cp)
   finish
 endif
-let g:loaded_dynamicfoldcolumn = "$Revision$"
+let g:loaded_dynamicfoldcolumn = 1
 
 " check for correct vim version {{{2
 if !has("folding")
