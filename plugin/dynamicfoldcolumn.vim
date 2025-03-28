@@ -127,6 +127,10 @@ function! s:DynamicFoldcolumn()
     else
       let l:this_columns = max( [ g:dynamicfoldcolumn_mincolumns, winwidth(l:window)/g:dynamicfoldcolumn_switchwidth ] )
     endif
+    if has("nvim")
+      " upper bound for neovim that supports only 9 foldcolumns
+      let l:this_columns = min( [ l:this_columns, 9 ] )
+    endif
     call s:DynamicFoldcolumnDebug(1,"DynamicFoldcolumn(): window " . l:window . " is " . winwidth(l:window) . " columns wide and gets " . l:this_columns . " foldcolumns")
     call setwinvar(l:window, "&foldcolumn", l:this_columns)
     let l:window += 1
